@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "sfcroom/version"
+require "sfc-room/version"
 
 Gem::Specification.new do |s|
-  s.name        = "sfcroom"
+  s.name        = "sfc-room"
   s.version     = SFCRoom::VERSION
   s.authors     = ["ymrl"]
   s.email       = ["ymrl@ymrl.net"]
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Parser for SFC classrooms}
   s.description = %q{Parser for SFC classrooms}
 
-  s.rubyforge_project = "sfcroom"
+  s.rubyforge_project = "sfc-room"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

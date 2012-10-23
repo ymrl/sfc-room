@@ -4,11 +4,11 @@ $:.unshift(File.dirname(__FILE__)) unless
   
 directory = File.expand_path(File.dirname(__FILE__))
 
-require directory + "/sfcroom/version.rb"
-require directory + "/sfcroom/constants.rb"
-require directory + "/sfcroom/utils.rb"
-require directory + "/sfcroom/room.rb"
-require directory + "/sfcroom/parse.rb"
+require directory + "/sfc-room/version.rb"
+require directory + "/sfc-room/constants.rb"
+require directory + "/sfc-room/utils.rb"
+require directory + "/sfc-room/room.rb"
+require directory + "/sfc-room/parse.rb"
 
 module SFCRoom
   # Your code goes here...

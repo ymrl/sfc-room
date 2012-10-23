@@ -4,14 +4,20 @@ class SFCRoom::Room
     @room = room
     @floor = floor
   end
+  def inspect
+    "[SFCRoom #{to_roman}]"
+  end
   def to_s
-    "#{building_in_japanese}#{@room}"
+    to_japanese
   end
   def to_greek
     "#{building_in_greek}#{@room}"
   end
   def to_roman
     "#{building_in_roman}#{@room}"
+  end
+  def to_japanese
+    "#{building_in_japanese}#{@room}"
   end
   def building_in_japanese
     SFCRoom::Buildings::JapaneseName[@building]

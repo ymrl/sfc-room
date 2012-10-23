@@ -1,27 +1,12 @@
 #coding:UTF-8
 require 'nkf'
+require 'jcode'
 module SFCRoom::Utils
   def self.greek_downcase str
-    enc = str.encoding
-    ret = ""
-    str.each_char do |char|
-      if char.match(/[Α-Ω]/)
-        char = (char.ord + 32).chr(enc)
-      end
-      ret += char
-    end
-    return ret
+    str.tr('Α-Ω','α-ω')
   end
   def self.greek_upcase str
-    enc = str.encoding
-    ret = ""
-    str.each_char do |char|
-      if char.match(/[α-ω]/)
-        char = (char.ord - 32).chr(enc)
-      end
-      ret += char
-    end
-    return ret
+    str.tr('α-ω','Α-Ω')
   end
   def self.hankaku_zenkaku str
     NKF::nkf('-Z1 -Ww',str)

@@ -1,6 +1,7 @@
 #coding:UTF-8
 require 'nkf'
-require 'jcode'
+require 'jcode' if RUBY_VERSION < "1.9"
+
 module SFCRoom::Utils
   def self.greek_downcase str
     str.tr('Α-Ω','α-ω')

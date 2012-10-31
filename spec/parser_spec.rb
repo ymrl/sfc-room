@@ -43,6 +43,13 @@ describe SFCRoom do
       room.to_s.should eql('タウ20')
     end
 
+    it 'can parse IIJHouse' do
+      room = SFCRoom.parse('IIJハウス')
+      room.building.should eql(SFCRoom::Buildings::Nu)
+      room.floor.should eql('1')
+      room.to_s.should eql('IIJハウス')
+    end
+
 
   end
 end

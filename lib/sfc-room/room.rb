@@ -1,8 +1,13 @@
 class SFCRoom::Room
-  def initialize building,room,floor=nil
-    @building = building
-    @room = room
-    @floor = floor
+  def initialize(opts={})
+    {:building => nil, :room => nil, :floor => nil, :source => nil}.each do |k,v|
+      opts[k] = v unless opts.has_key? k
+    end
+    raise ArgumentError, "building must be String" unless opts[:building]
+    @building = opts[:building]
+    @room = opts[:room]
+    @floor = opts[:floor]
+    @source = opts[:source]
   end
   def inspect
     "[SFCRoom #{to_roman}]"
@@ -31,5 +36,5 @@ class SFCRoom::Room
   def building_number_for_sfs
     SFCRoom::Buildings::SFSNumber[@building] || SFCRoom::Buildings::SFSNumber[SFCRoom::Buildings::Others]
   end
-  attr_reader :building,:floor,:room
+  attr_reader :building,:floor,:room,:source
 end

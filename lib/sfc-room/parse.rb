@@ -1,9 +1,9 @@
 #coding:utf-8
 module SFCRoom
 
-  def parse(str)
+  def parse(source_str)
     building = nil
-    q = Utils.convert_for_search(str)
+    q = Utils.convert_for_search(source_str)
     SFCRoom::Buildings::List.each do |b|
       arr = [b.to_s]
       arr.push SFCRoom::Buildings::JapaneseName[b]
@@ -57,7 +57,7 @@ module SFCRoom
       floor = m[1][0,1]
     end
 
-    return Room.new building,number,floor
+    return Room.new(:building => building, :room => number, :floor => floor, :source => source_str)
   end
   module_function :parse
 end

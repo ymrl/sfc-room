@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["ymrl@ymrl.net"]
   s.homepage    = ""
   s.summary     = %q{Parser for SFC classrooms}
-  s.description = %q{Parser for SFC classrooms}
+  s.description = s.summary
 
   s.rubyforge_project = "sfc-room"
 
@@ -20,5 +20,7 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   s.add_development_dependency "rspec"
+  s.add_development_dependency "rake"
+  s.add_development_dependency "bundler", "~> 1.3"
   # s.add_runtime_dependency "rest-client"
 end

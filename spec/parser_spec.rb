@@ -47,7 +47,7 @@ describe SFCRoom do
       room = SFCRoom.parse('IIJハウス')
       room.building.should eql(SFCRoom::Buildings::Nu)
       room.floor.should eql('1')
-      room.to_s.should eql('IIJハウス')
+      room.to_s.should eql('ニュー')
     end
 
 

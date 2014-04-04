@@ -162,10 +162,10 @@ module SFCRoom
     N2 = "n2"
     S1 = "s1"
     S2 = "s2"
-    IIJHouse      = 1
-    DocomoHouse   = 2
-    DNPHouse      = 3
-    TateuchiHouse = 4
-    MoriAtelier   = 5
+    IIJHouse      = "1"
+    DocomoHouse   = "2"
+    DNPHouse      = "3"
+    TateuchiHouse = "4"
+    MoriAtelier   = "5"
   end
 end

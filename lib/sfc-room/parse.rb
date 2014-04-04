@@ -12,7 +12,13 @@ module SFCRoom
       arr += SFCRoom::Buildings::Aliases[b]
       arr.delete(nil)
       arr.each do |word|
-        if q.match(/^#{Utils.convert_for_search word}/)
+        search_word = Utils.convert_for_search word
+        if search_word.split(//u).size == 1
+          if q.match(/^#{search_word}[SN]?\d*$/i)
+            building = b
+            break
+          end
+        elsif q.match(/^#{search_word}/i)
           building = b
           break
         end

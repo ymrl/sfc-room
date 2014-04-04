@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = ""
   s.summary     = %q{Parser for SFC classrooms}
   s.description = s.summary
+  s.required_ruby_version = ">= 1.9"
 
   s.rubyforge_project = "sfc-room"
 

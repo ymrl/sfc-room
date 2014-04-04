@@ -13,7 +13,7 @@ module SFCRoom
       arr.delete(nil)
       arr.each do |word|
         search_word = Utils.convert_for_search word
-        if search_word.split(//u).size == 1
+        if search_word.length == 1
           if q.match(/^#{search_word}[SN]?\d*$/i)
             building = b
             break

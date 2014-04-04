@@ -2,6 +2,11 @@
 
 SFCRoom is a parser for clasrooms of Keio University Shonan Fujisawa Campus.
 
+- https://github.com/ymrl/sfc-room
+- http://rubygems.org/gems/sfc-room
+- [![Build Status](https://travis-ci.org/ymrl/sfc-room.svg?branch=master)](https://travis-ci.org/ymrl/sfc-room)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:

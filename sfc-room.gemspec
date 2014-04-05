@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = SFCRoom::VERSION
   s.authors     = ["ymrl"]
   s.email       = ["ymrl@ymrl.net"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/ymrl/sfc-room"
   s.summary     = %q{Parser for SFC classrooms}
   s.description = s.summary
   s.required_ruby_version = ">= 1.9"

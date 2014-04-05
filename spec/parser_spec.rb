@@ -3,6 +3,10 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 
 describe SFCRoom do
   describe 'parser' do
+    it 'raises ParseError' do
+      expect{SFCRoom::parse('')}.to raise_error(SFCRoom::ParseError)
+    end
+
     it 'can parse all roman classroom' do
       include SFCRoom
       room = SFCRoom.parse('i11')
@@ -29,7 +33,7 @@ describe SFCRoom do
       room.to_s.should eql('ラムダ19')
       room.source.should eql('ラムダ19')
     end
-    
+
     it 'can parse delta classroom' do
       room = SFCRoom.parse('ΔS113')
       room.building.should eql(SFCRoom::Buildings::Delta)

@@ -1,5 +1,7 @@
 #coding:utf-8
 module SFCRoom
+  class ParseError < StandardError
+  end
 
   def parse(source_str)
     building = nil
@@ -56,6 +58,7 @@ module SFCRoom
       number = m[1]
       floor = m[1][0,1]
     end
+    raise ParseError unless building
 
     return Room.new(:building => building, :room => number, :floor => floor, :source => source_str)
   end

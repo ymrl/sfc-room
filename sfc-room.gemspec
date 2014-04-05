@@ -9,7 +9,8 @@ Gem::Specification.new do |s|
   s.email       = ["ymrl@ymrl.net"]
   s.homepage    = "https://github.com/ymrl/sfc-room"
   s.summary     = %q{Parser for SFC classrooms}
-  s.description = s.summary
+  s.description = %q{SFCRoom is a parser for clasrooms of Keio University Shonan Fujisawa Campus.  }
+  s.licenses    = ['MIT']
   s.required_ruby_version = ">= 1.9"
 
   s.rubyforge_project = "sfc-room"
